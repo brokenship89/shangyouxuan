@@ -1,0 +1,112 @@
+#wrapper #header .headTop {
+  background: #eaeaea;
+  height: 30px;
+}
+#wrapper #header .headTop .headTopMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1200px;
+}
+#wrapper #header .headTop .headTopMain .left {
+  display: flex;
+  height: 30px;
+  gap: 15px;
+  align-items: center;
+}
+#wrapper #header .headTop .headTopMain .left p {
+  font-size: 0;
+}
+#wrapper #header .headTop .headTopMain .left p a {
+  font-size: 12px;
+  padding-left: 5px;
+}
+#wrapper #header .headTop .headTopMain .left p a:first-child {
+  border-right: 1px solid #b3aeae;
+  padding-right: 5px;
+}
+#wrapper #header .headTop .headTopMain .right {
+  display: flex;
+  height: 30px;
+  box-sizing: border-box;
+}
+#wrapper #header .headTop .headTopMain .right nav {
+  display: flex;
+  align-items: center;
+  font-size: 0;
+}
+#wrapper #header .headTop .headTopMain .right nav a {
+  border-right: 1px solid #b3aeae;
+  padding: 0 10px;
+  font-size: 12px;
+}
+#wrapper #header .headTop .headTopMain .right nav a:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+#wrapper #header .headBottom .headBottomMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+}
+#wrapper #header .headBottom .headBottomMain .logo a img {
+  height: 56px;
+  width: 175px;
+  margin: 25px 45px;
+}
+#wrapper #header .headBottom .headBottomMain .search input:first-child {
+  box-sizing: border-box;
+  width: 490px;
+  height: 32px;
+  padding: 0 4px;
+  border: 3px solid #ea4a36;
+}
+#wrapper #header .headBottom .headBottomMain .search input:last-child {
+  width: 68px;
+  height: 32px;
+  color: #fff;
+  background-color: #ea4a36;
+  border: none;
+}
+#wrapper #navWrap {
+  border-bottom: 2px solid #e1251b;
+}
+#wrapper #navWrap .navWrapMain {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 44px;
+}
+#wrapper #navWrap .navWrapMain a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #333;
+}
+#wrapper #navWrap .navWrapMain a:first-child {
+  width: 210px;
+  height: 50px;
+  background: #e1251b;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+#wrapper #content .contentMain {
+  width: 1200px;
+  margin: 15px auto 0 auto;
+}
+#wrapper #content .contentMain #navPath {
+  padding: 9px 15px 9px 0;
+  font-size: 0;
+}
+#wrapper #content .contentMain #navPath a {
+  font-size: 12px;
+}
+#wrapper #content .contentMain #navPath i {
+  padding: 0 5px;
+  font-size: 12px;
+}

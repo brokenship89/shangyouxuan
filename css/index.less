@@ -1,0 +1,192 @@
+// 最外层的包裹元素
+#wrapper {
+
+  // 头部开始
+  #header {
+
+    // 上部
+    .headTop {
+      background: #eaeaea;
+      height: 30px;
+
+      // 版心元素
+      .headTopMain {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 1200px;
+
+        // 左部
+        .left {
+          display: flex;
+          height: 30px;
+          gap: 15px;
+          align-items: center; // 垂直居中
+
+          p {
+            font-size: 0;
+
+
+            a {
+              &:first-child {
+                border-right: 1px solid #b3aeae;
+                padding-right: 5px;
+
+              }
+
+              font-size: 12px;
+              padding-left:5px;
+            }
+          }
+        }
+
+        // 右部
+        .right {
+          display: flex;
+          height: 30px;
+          box-sizing: border-box;
+
+          nav {
+            display: flex;
+            align-items: center; // 垂直居中
+            font-size: 0;
+
+            a {
+              border-right: 1px solid #b3aeae;
+              padding: 0 10px;
+              font-size: 12px;
+
+              &:last-child {
+                padding-right: 0;
+                border-right: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // 下部
+    .headBottom {
+
+      // 版心元素
+      .headBottomMain {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1200px;
+        margin: 0 auto;
+
+        // logo
+        .logo {
+          a {
+            img {
+              height: 56px;
+              width: 175px;
+              margin: 25px 45px;
+            }
+          }
+        }
+
+        // 搜索框
+        .search {
+
+          input {
+
+            // 搜索框
+            &:first-child {
+              box-sizing: border-box;
+              width: 490px;
+              height: 32px;
+              padding: 0 4px;
+              border: 3px solid #ea4a36;
+
+            }
+
+            // 搜索按钮
+            &:last-child {
+              width: 68px;
+              height: 32px;
+              color: #fff;
+              background-color: #ea4a36;
+              border: none;
+            }
+          }
+        }
+
+
+
+
+      }
+    }
+  }
+
+  // 头部结束
+
+  // 导航开始
+  #navWrap {
+
+    border-bottom: 2px solid #e1251b;
+
+
+    // 版心元素
+    .navWrapMain {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 44px;
+
+
+      a {
+        display: flex;
+        align-items: center; // 垂直居中
+        justify-content: center; // 水平居中
+
+
+        &:first-child {
+          width: 210px;
+          height: 50px;
+          background: #e1251b;
+          color: #fff;
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        font-size:16px;
+        color:#333;
+      }
+    }
+  }
+
+  // 导航结束
+
+
+
+  // 内容区域开始
+  #content {
+
+    // 版心元素
+    .contentMain {
+      width: 1200px;
+      margin: 15px auto 0 auto;
+
+      // 路径导航
+      #navPath {
+        padding: 9px 15px 9px 0;
+        font-size: 0;
+
+        a {
+          font-size: 12px;
+        }
+
+        i {
+          padding: 0 5px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  // 内容区域结束
+}
