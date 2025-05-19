@@ -1,4 +1,4 @@
-var goodData = {
+const goodData = {
   path: [
     {
       title: "手机、数码、通讯",

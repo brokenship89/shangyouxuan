@@ -1,5 +1,8 @@
 // 最外层的包裹元素
 #wrapper {
+  a {
+    text-decoration: none;
+  }
 
   // 头部开始
   #header {
@@ -185,8 +188,242 @@
           font-size: 12px;
         }
       }
+
+      // 路径导航结束
+      // 中间区域开始
+      #center {
+        display: flex;
+
+        margin: 5px 0 15px;
+        gap: 110px;
+
+        #left {
+          display: flex;
+          flex-direction: column;
+
+          // 上部
+          .leftTop {
+            display: flex;
+            gap: 20px;
+
+            .smallPic {
+              position: relative;
+              width: 400px;
+              height: 400px;
+              overflow: hidden;
+              border: 1px solid #DFDFDF;
+              box-sizing: border-box;
+
+              img {
+                width: 400px;
+                height: 400px;
+              }
+
+              .mask {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                opacity: 0;
+                width: 200px;
+                height: 200px;
+                background-color: rgba(255, 255, 255, .5);
+                border: 1px solid #ddd;
+                box-sizing: border-box;
+                transition: opacity 0.2s ease;
+              }
+            }
+
+            .bigPic {
+              position: relative;
+              display: none;
+              width: 400px;
+              height: 400px;
+              overflow: hidden;
+              border: 1px solid #ddd;
+              box-sizing: border-box;
+
+              img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 800px;
+                height: 800px;
+              }
+            }
+          }
+
+          // 下部
+          .leftBottom {
+            width: 400px;
+            margin-top: 5px;
+            display: flex;
+            font-size: 0;
+
+            a {
+              width: 10px;
+              height: 54px;
+              border: 1px solid #ccc;
+              font-size: 12px;
+              background: #ebebeb;
+              text-align: center;
+              line-height: 54px;
+
+              &:first-child {
+                margin-right: 4px;
+              }
+
+              &:last-child {
+                margin-left: 4px;
+              }
+            }
+
+            .picList {
+              display: flex;
+
+              width: 368px;
+              height: 56px;
+              overflow: hidden;
+
+
+              ul {
+
+                display: flex;
+
+                width: 100%;
+                flex-wrap: nowrap;
+                transition: transform 0.5s ease;
+
+                li {
+
+                  display: flex;
+                  width: 73px;
+                  flex: 0 0 auto;
+
+                  justify-content: space-evenly;
+                  align-items: center;
+
+
+
+                  img {
+                    width: 50px;
+                    height: 50px;
+                    padding: 4px;
+                    border: 1px solid #CCC;
+                    box-sizing: border-box;
+
+                  }
+                }
+              }
+            }
+
+
+          }
+        }
+
+        #right {
+
+          width: 700px;
+
+          .rightTop {
+            h3 {
+              font-size: 14px;
+              line-height: 21px;
+              margin-top: 15px;
+            }
+
+            >p {
+              color: #e12228;
+              margin-top: 15px;
+            }
+
+            .priceWrap {
+
+              margin-top: 10px;
+
+              background-color: #fee9ec;
+              padding: 7px;
+
+              .priceTop {
+                display: flex;
+                justify-content: space-between;
+                line-height: 28px;
+
+                >span {
+                  margin-right: 15px;
+                }
+
+                .price {
+                  display: flex;
+                  color: #cc1122;
+                  margin-right: auto;
+
+                  >span {
+                    font-size: 16px;
+                  }
+
+                  >p {
+                    font-size: 24px;
+                  }
+
+                  i {
+                    font-size: 12px;
+                  }
+                }
+
+
+              }
+
+              .priceBottom {
+                display: flex;
+                line-height: 28px;
+
+                >span {
+                  margin-right: 15px;
+                }
+
+                p {
+                  width: 520px;
+
+                  span {
+                    &:first-child {
+                      background-color: #c81623;
+                      padding: 3px;
+                      color: #fff;
+                    }
+
+                    &:last-child {
+
+                      color: #999;
+                    }
+                  }
+                }
+              }
+
+              .support {
+                display: flex;
+                border-bottom: 1px solid #ededed;
+                padding-bottom: 5px;
+
+                >span {}
+
+                >p {}
+              }
+
+              .address {
+                display: flex;
+
+                >span {}
+
+                >p {}
+              }
+            }
+          }
+        }
+      }
+
+      // 中间区域结束
+      // 内容区域结束
     }
   }
-
-  // 内容区域结束
 }
