@@ -271,11 +271,29 @@
 #wrapper #content .contentMain #center #right .rightTop .priceWrap .priceBottom p span:last-child {
   color: #999;
 }
-#wrapper #content .contentMain #center #right .rightTop .priceWrap .support {
+#wrapper #content .contentMain #center #right .rightTop .support {
   display: flex;
-  border-bottom: 1px solid #ededed;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  line-height: 28px;
 }
-#wrapper #content .contentMain #center #right .rightTop .priceWrap .address {
+#wrapper #content .contentMain #center #right .rightTop .support > span {
+  margin-right: 15px;
+}
+#wrapper #content .contentMain #center #right .rightTop .support > p {
+  width: 520px;
+  color: #999;
+}
+#wrapper #content .contentMain #center #right .rightTop .address {
   display: flex;
+  padding-top: 10px;
+  line-height: 28px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ededed;
+}
+#wrapper #content .contentMain #center #right .rightTop .address > span {
+  margin-right: 15px;
+}
+#wrapper #content .contentMain #center #right .rightTop .address > p {
+  width: 520px;
+  color: #999;
 }
