@@ -148,12 +148,14 @@ window.addEventListener('load', () => {
       li.appendChild(img)
       // 为每个li添加点击事件
       li.addEventListener('click', function () {
-        // 3.点击缩略图确定其下标，找到小图路径和大图路径替换掉现有src
-        const smallImg = document.querySelector('#wrapper #content .contentMain #center #left .leftTop .smallPic img')
-        const bigImg = document.querySelector('#wrapper #content .contentMain #center #left .leftTop .bigPic img')
 
-        smallImg.src = picList[i].s
+        // 3.点击缩略图确定其下标，找到小图路径和大图路径替换掉现有src
+        const bigImg = document.querySelector('#wrapper #content .contentMain #center #left .leftTop .bigPic img')
+        const smallImg = document.querySelector('#wrapper #content .contentMain #center #left .leftTop .smallPic img')
+
         bigImg.src = picList[i].b
+        smallImg.src = picList[i].s
+
       })
 
       // 将li添加到ul中
@@ -209,4 +211,83 @@ window.addEventListener('load', () => {
     })
   }
   arrowBind()
+
+  // 商品详情数据的动态渲染
+  function rightTopData() {
+    // 1.查找rightTop元素
+    // 2.查找data.js->goodData->goodsDetail
+    // 3.建立一个字符串变量，将原来的结构贴进来，将对应数据渲染进去
+
+    // 1.查找rightTop元素
+    const rightTop = document.querySelector('#wrapper #content .contentMain #center #right .rightTop')
+
+    // 2.查找data.js->goodData->goodsDetail
+    const goodsDetail = goodData.goodsDetail
+
+    // 3.建立一个字符串变量，将原来的结构贴进来，将对应数据渲染进去
+    let str = `
+      <h3>${goodsDetail.title}</h3>
+      <p>${goodsDetail.recommend}</p>
+      <div class="priceWrap">
+        <div class="priceTop">
+          <span>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</span>
+          <div class="price">
+            <span>￥</span>
+            <p>${goodsDetail.price}</p>
+            <i>降价通知</i>
+          </div>
+          <div class="commentTotal">
+            <span>累计评价</span>
+            <span>${goodsDetail.evaluateNum}</span>
+          </div>
+        </div>
+        <div class="priceBottom">
+          <span>促&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</span>
+          <p>
+            <span>${goodsDetail.promoteSales.type}</span>
+            <span>${goodsDetail.promoteSales.content}</span>
+          </p>
+        </div>
+      </div>
+      <div class="support">
+        <span>支&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;持</span>
+        <p>${goodsDetail.support}</p>
+      </div>
+      <div class="address">
+        <span>配&nbsp;送&nbsp;至</span>
+        <p>${goodsDetail.address}</p>
+      </div>
+    `
+
+    rightTop.innerHTML = str
+  }
+  rightTopData()
+
+
+  // 商品参数区域的渲染
+  function rightBottomData() {
+    // 1.查找rightBottom元素
+    // 2.查找data.js->goodData->crumb
+    // 3.建立一个字符串变量，将原来的结构贴进来，将对应数据渲染进去
+
+    // 1.查找rightBottom元素
+    const rightBottom = document.querySelector('#wrapper #content .contentMain #center #right .rightBottom .choose dl')
+
+    // 2.查找data.js->goodData->crumb
+    const crumb = goodData.goodsDetail.crumbData
+
+    // 3.建立一个字符串变量，将原来的结构贴进来，将对应数据渲染进去
+    let str = ''
+    for (let i = 0; i < crumb.length; i++) {
+      str += `
+        <div>
+          <dt>${crumb[i].title}</dt>
+          ${crumb[i].data.map(item => `<dd>${item.type}</dd>`).join('')}
+        </div>
+      `
+    }
+
+    rightBottom.innerHTML = str
+  }
+  rightBottomData()
 })

@@ -203,8 +203,9 @@
 
           // 上部
           .leftTop {
+            position: relative;
             display: flex;
-            gap: 20px;
+
 
             .smallPic {
               position: relative;
@@ -235,7 +236,9 @@
             }
 
             .bigPic {
-              position: relative;
+              position: absolute;
+              left: 420px;
+              top: 0;
               display: none;
               width: 400px;
               height: 400px;
@@ -436,11 +439,62 @@
             }
 
           }
+
+          .rightBottom {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            line-height: 28px;
+
+            .resultAppear {}
+
+            .choose {
+
+
+
+              dl {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 13px;
+
+
+                >div {
+                  display: flex;
+
+
+                }
+
+                dt {
+
+                  margin-right: 15px;
+                }
+
+                dd {
+
+                  margin-right: 5px;
+                  color: #666;
+                  line-height: 24px;
+                  padding: 2px 14px;
+                  border-top: 1px solid #eee;
+                  border-left: 1px solid #eee;
+                  border-bottom: 1px solid #bbb;
+                  border-right: 1px solid #bbb;
+
+                  &:first-of-type {
+                    color: red;
+                  }
+
+
+                }
+              }
+            }
+          }
         }
       }
-
-      // 中间区域结束
-      // 内容区域结束
     }
+
+    // 中间区域结束
+    // 内容区域结束
   }
 }

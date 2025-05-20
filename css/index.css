@@ -123,8 +123,8 @@
   flex-direction: column;
 }
 #wrapper #content .contentMain #center #left .leftTop {
+  position: relative;
   display: flex;
-  gap: 20px;
 }
 #wrapper #content .contentMain #center #left .leftTop .smallPic {
   position: relative;
@@ -152,7 +152,9 @@
   transition: opacity 0.2s ease;
 }
 #wrapper #content .contentMain #center #left .leftTop .bigPic {
-  position: relative;
+  position: absolute;
+  left: 420px;
+  top: 0;
   display: none;
   width: 400px;
   height: 400px;
@@ -296,4 +298,35 @@
 #wrapper #content .contentMain #center #right .rightTop .address > p {
   width: 520px;
   color: #999;
+}
+#wrapper #content .contentMain #center #right .rightBottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  line-height: 28px;
+}
+#wrapper #content .contentMain #center #right .rightBottom .choose dl {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+#wrapper #content .contentMain #center #right .rightBottom .choose dl > div {
+  display: flex;
+}
+#wrapper #content .contentMain #center #right .rightBottom .choose dl dt {
+  margin-right: 15px;
+}
+#wrapper #content .contentMain #center #right .rightBottom .choose dl dd {
+  margin-right: 5px;
+  color: #666;
+  line-height: 24px;
+  padding: 2px 14px;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+}
+#wrapper #content .contentMain #center #right .rightBottom .choose dl dd:first-of-type {
+  color: red;
 }

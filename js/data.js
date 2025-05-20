@@ -1,17 +1,16 @@
 const goodData = {
-  path: [
-    {
-      title: "手机、数码、通讯",
-      url: "###"
-    }, {
-      title: "手机",
-      url: "###"
-    }, {
-      title: "Apple苹果",
-      url: "###"
-    }, {
-      title: "iphone 6S系",
-    }
+  path: [{
+    title: "手机、数码、通讯",
+    url: "###"
+  }, {
+    title: "手机",
+    url: "###"
+  }, {
+    title: "Apple苹果",
+    url: "###"
+  }, {
+    title: "iphone 6S系",
+  }
   ],
   imagessrc: [
     { b: "./images/b1.png", s: "./images/s1.png" },
